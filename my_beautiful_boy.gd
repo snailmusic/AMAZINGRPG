@@ -28,3 +28,7 @@ func _input(event: InputEvent) -> void:
 		if event.keycode == KEY_J:
 			rotate(0.2)
 			#$Camera2D.rotate(0.2)
+
+
+func transition_to_battle():
+	$AnimationPlayer.play("new_animation")

@@ -4,6 +4,66 @@
 [ext_resource type="Texture2D" uid="uid://bsph54ow00snl" path="res://gfx/beautiful lights today.png" id="1_r0uxn"]
 [ext_resource type="Texture2D" uid="uid://dgu6up416d213" path="res://gfx/my child.png" id="1_uniwj"]
 
+[sub_resource type="Animation" id="Animation_msqn8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_wts2l"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(37.305, 37.305)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jwhqe"]
+_data = {
+&"RESET": SubResource("Animation_msqn8"),
+&"new_animation": SubResource("Animation_wts2l")
+}
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_r0uxn"]
 atlas = ExtResource("1_uniwj")
 region = Rect2(0, 0, 32, 32)
@@ -32,7 +92,12 @@ radius = 12.0
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1730071402]
 script = ExtResource("1_msqn8")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1704840173]
+root_node = NodePath("../Camera2D")
+libraries/ = SubResource("AnimationLibrary_jwhqe")
+
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=533690460]
+position = Vector2(-13, -4)
 texture = ExtResource("1_r0uxn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1046696595]
