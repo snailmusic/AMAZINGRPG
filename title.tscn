@@ -2,7 +2,22 @@
 
 [ext_resource type="Script" uid="uid://dopx0jll6jls7" path="res://button.gd" id="1_y7k74"]
 
-[node name="Label" type="Label" unique_id=1843281769]
+[node name="Control" type="Control" unique_id=357454631]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=289969237]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 117.0
+offset_right = 472.0
+offset_bottom = 366.0
+color = Color(0.9529412, 0.7529412, 1, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1843281769]
+layout_mode = 0
 offset_left = 141.0
 offset_top = 106.0
 offset_right = 262.0
@@ -10,16 +25,16 @@ offset_bottom = 155.0
 text = "BEAUTIFUL DAY
 TODAY! YEAH"
 
-[node name="Label" type="Label" parent="." unique_id=1141294444]
+[node name="Label" type="Label" parent="Label" unique_id=1141294444]
 layout_mode = 0
-offset_left = -28.0
-offset_top = 8.000004
-offset_right = 115.0
-offset_bottom = 62.000004
+offset_left = 2.0
+offset_top = 47.0
+offset_right = 145.0
+offset_bottom = 101.0
 scale = Vector2(1.1864667, 6.058152)
 text = "WINDY AND SNAIL"
 
-[node name="Button" type="Button" parent="." unique_id=596622681]
+[node name="Button" type="Button" parent="Label" unique_id=596622681]
 layout_mode = 0
 offset_left = -65.0
 offset_top = 185.0
@@ -28,4 +43,4 @@ offset_bottom = 216.0
 text = "yeahhhhhhhhh sorry"
 script = ExtResource("1_y7k74")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Label/Button" to="Label/Button" method="_on_pressed"]
