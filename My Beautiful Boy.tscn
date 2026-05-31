@@ -111,7 +111,7 @@ shape = SubResource("CircleShape2D_uniwj")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=861893371]
 ignore_rotation = false
 position_smoothing_enabled = true
-position_smoothing_speed = 0.165
+position_smoothing_speed = 0.44
 rotation_smoothing_enabled = true
 drag_left_margin = 0.0
 drag_top_margin = 0.0
