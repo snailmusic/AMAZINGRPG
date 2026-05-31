@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dbe5jp8ssnxc8"]
+
+[ext_resource type="Script" uid="uid://brh7vkjfptq0o" path="res://my_beautiful_boy.gd" id="1_msqn8"]
+[ext_resource type="Texture2D" uid="uid://bsph54ow00snl" path="res://gfx/beautiful lights today.png" id="1_r0uxn"]
+[ext_resource type="Texture2D" uid="uid://dgu6up416d213" path="res://gfx/my child.png" id="1_uniwj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0uxn"]
+atlas = ExtResource("1_uniwj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msqn8"]
+atlas = ExtResource("1_uniwj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wts2l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0uxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msqn8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 60.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uniwj"]
+radius = 12.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1730071402]
+script = ExtResource("1_msqn8")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=533690460]
+texture = ExtResource("1_r0uxn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1046696595]
+sprite_frames = SubResource("SpriteFrames_wts2l")
+frame_progress = 0.33528
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=905341]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_uniwj")
