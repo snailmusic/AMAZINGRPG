@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://1d8rrpg5bpyf"]
 
+[ext_resource type="AudioStream" uid="uid://dldn2qnuokbp1" path="res://music/meow main theme.ogg" id="1_ntrnp"]
+
 [node name="Node2D" type="Node2D" unique_id=993368115]
+
+[node name="MeowMainTheme" type="AudioStreamPlayer2D" parent="." unique_id=1367792156]
+position = Vector2(-26, -26)
+stream = ExtResource("1_ntrnp")

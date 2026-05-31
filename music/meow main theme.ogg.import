@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dldn2qnuokbp1"
+path="res://.godot/imported/meow main theme.ogg-cbb6907d5ff2d79db67fc60b5ed0b28c.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/meow main theme.ogg"
+dest_files=["res://.godot/imported/meow main theme.ogg-cbb6907d5ff2d79db67fc60b5ed0b28c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
