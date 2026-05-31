@@ -52,6 +52,12 @@ theme_override_fonts/normal_font = ExtResource("2_kjqjv")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 
+[node name="NPC" parent="." unique_id=1422913508 instance=ExtResource("4_kjqjv")]
+position = Vector2(136, 323)
+meow = SubResource("SpriteFrames_ohnun")
+text = "my dinnar 🔥
+sex sex"
+
 [node name="Timer" type="Timer" parent="textbox/RichTextLabel" unique_id=214521587]
 wait_time = 0.05
 autostart = true
