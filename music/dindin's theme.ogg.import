@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvw3wp5m7qfhv"
+path="res://.godot/imported/dindin's theme.ogg-d9a685b8ed059ad488b6b1e35731698b.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/dindin's theme.ogg"
+dest_files=["res://.godot/imported/dindin's theme.ogg-d9a685b8ed059ad488b6b1e35731698b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
