@@ -1,3 +1,31 @@
 [gd_scene format=3 uid="uid://bb0hyk0d4fcxh"]
 
+[ext_resource type="FontFile" uid="uid://ju0phwy1kkbj" path="res://font/Pixellari.ttf" id="1_ip7xm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w7wwj"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+
 [node name="Battle" type="Node2D" unique_id=1225839141]
+
+[node name="Panel" type="Panel" parent="." unique_id=52405869]
+offset_left = 160.0
+offset_top = 440.0
+offset_right = 1120.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w7wwj")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1209749203]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 944.0
+offset_bottom = 264.0
+theme_override_fonts/font = ExtResource("1_ip7xm")
+theme_override_font_sizes/font_size = 32
+text = "duhhhh duh dhu duh duh DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH"
+autowrap_mode = 2
