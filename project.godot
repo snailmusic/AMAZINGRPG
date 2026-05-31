@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="AMAZINGRPG!!!"
-run/main_scene="uid://1d8rrpg5bpyf"
+run/main_scene="uid://bbrfmymgi60bj"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
