@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bb0hyk0d4fcxh"]
 
+[ext_resource type="Texture2D" uid="uid://bfd4rmpq2jubi" path="res://gfx/battlebg.png" id="1_7sfm4"]
 [ext_resource type="FontFile" uid="uid://ju0phwy1kkbj" path="res://font/Pixellari.ttf" id="1_ip7xm"]
 [ext_resource type="AudioStream" uid="uid://csqwwc46ejmvc" path="res://sfx/default text.wav" id="2_oxp8w"]
 
@@ -17,15 +18,22 @@ script/source = "extends Panel
 
 func _ready():
 	$RichTextLabel.visible_characters = 0
+	$RichTextLabel/Timer.start()
 
 func _on_timer_timeout() -> void:
-	$RichTextLabel.visible_characters += 1
-	if($RichTextLabel.visible_ratio == 1):
+	if($RichTextLabel.visible_ratio >= 1):
+		$RichTextLabel/Timer.stop()
 		return
 	$textchirpthingy.play()
+	$RichTextLabel.visible_characters += 1
 "
 
 [node name="Battle" type="Node2D" unique_id=1225839141]
+
+[node name="Battlebg" type="Sprite2D" parent="." unique_id=858515934]
+position = Vector2(200, 200)
+scale = Vector2(5, 4.975)
+texture = ExtResource("1_7sfm4")
 
 [node name="textbox" type="Panel" parent="." unique_id=52405869]
 offset_top = 268.0
@@ -43,10 +51,9 @@ offset_bottom = 158.0
 theme_override_fonts/normal_font = ExtResource("1_ip7xm")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
-text = "duhhhh duh dhu duh duh DUH DUH DUH DUH DUH DUH DUH DUH DUH DUH "
 
 [node name="Timer" type="Timer" parent="textbox/RichTextLabel" unique_id=214521587]
-wait_time = 0.035
+wait_time = 0.05
 autostart = true
 
 [node name="textchirpthingy" type="AudioStreamPlayer2D" parent="textbox" unique_id=1732350263]
