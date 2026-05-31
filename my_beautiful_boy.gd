@@ -22,6 +22,11 @@ func _physics_process(delta: float) -> void:
 	velocity.y = direction_y * SPEED * modifier
 
 	move_and_slide()
+	var overlapping = $Area2D.get_overlapping_areas()
+	if (Input.is_action_just_pressed("ui_accept") and len(overlapping) > 0):
+		if (overlapping[0] is NPC):
+			var text = overlapping[0].text
+			$CanvasLayer/Control.start_dialogue(text)
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:

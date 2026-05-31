@@ -1,4 +1,5 @@
 extends Area2D
+class_name NPC
 
 @export var meow: SpriteFrames
 @export_multiline() var text: String
