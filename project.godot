@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="AMAZINGRPG!!!"
+run/main_scene="uid://1d8rrpg5bpyf"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [physics]
 

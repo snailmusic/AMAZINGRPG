@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drpuuc5bc0c4x"
-path="res://.godot/imported/dflubenhgeim.png-ee689451f0b3ea75097fee355281b9ee.ctex"
+path="res://.godot/imported/dflubenhgeim.png-7b4884b1e81f120fce5341cb1b4569a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dflubenhgeim.png"
-dest_files=["res://.godot/imported/dflubenhgeim.png-ee689451f0b3ea75097fee355281b9ee.ctex"]
+source_file="res://gfx/dflubenhgeim.png"
+dest_files=["res://.godot/imported/dflubenhgeim.png-7b4884b1e81f120fce5341cb1b4569a7.ctex"]
 
 [params]
 
