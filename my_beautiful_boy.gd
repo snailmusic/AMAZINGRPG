@@ -22,3 +22,9 @@ func _physics_process(delta: float) -> void:
 	velocity.y = direction_y * SPEED * modifier
 
 	move_and_slide()
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.keycode == KEY_J:
+			rotate(0.2)
+			#$Camera2D.rotate(0.2)
